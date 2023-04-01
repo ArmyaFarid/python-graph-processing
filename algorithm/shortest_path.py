@@ -122,7 +122,7 @@ class Bellman:
                         Z.add(x)
         return A
 
-    def bellman_ford2(self, s):
+    def bellman_ford(self, s):
         matrix = self.graph
         n = len(matrix)
         d = np.full(n, np.inf)
@@ -148,34 +148,6 @@ class Dijkstra:
         self.graph = graph
 
     def dijkstra(self, root):
-        graph = self.graph
-        n = len(graph)
-        visited = [False] * n
-        distances = [float('inf')] * n
-        parent = [-1] * n
-        distances[root] = 0
-
-        pq = [(0, root)]
-
-        while pq:
-            (dist, node) = heapq.heappop(pq)
-
-            if visited[node]:
-                continue
-
-            visited[node] = True
-
-            for neighbor in range(n):
-                if graph[node][neighbor] != float('inf'):
-                    new_dist = dist + graph[node][neighbor]
-                    if new_dist < distances[neighbor]:
-                        distances[neighbor] = new_dist
-                        parent[neighbor] = node
-                        heapq.heappush(pq, (new_dist, neighbor))
-
-        return parent, distances
-
-    def dijkstra2(self, root):
         matrix = self.graph
         n = len(matrix)
         dist = [float('inf')] * n

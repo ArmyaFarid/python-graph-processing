@@ -201,54 +201,6 @@ class Kosaraju:
 
         return scc
 
-    # def transpose(self, graph):
-    #     n = len(graph)
-    #     transposed_graph = [[float('inf')] * n for _ in range(n)]
-    #     for i in range(n):
-    #         for j in range(n):
-    #             if graph[i][j] != float('inf'):
-    #                 transposed_graph[j][i] = graph[i][j]
-    #     return transposed_graph
-    #
-    # def find_root_vertex(self):
-    #     # Step 1: Find strongly connected components
-    #     graph = self.graph
-    #     n = len(graph)
-    #     visited = [False] * n
-    #     stack = []
-    #     for u in range(n):
-    #         if not visited[u]:
-    #             self.dfs(graph, u, visited, stack)
-    #
-    #     transposed_graph = self.transpose(graph)
-    #     visited = [False] * n
-    #     scc = []
-    #     while stack:
-    #         u = stack.pop()
-    #         if not visited[u]:
-    #             component = []
-    #             self.dfs(transposed_graph, u, visited, component)
-    #             scc.append(component)
-    #     # Step 2: Check if graph has multiple SCCs
-    #     if len(scc) > 1:
-    #         return None
-    #
-    #     # Step 3: Check if SCC has a cycle
-    #     root = scc[0][0]
-    #     visited = [False] * n
-    #     stack = [(root, -1)]
-    #     while stack:
-    #         u, parent = stack.pop()
-    #         visited[u] = True
-    #         for v in range(n):
-    #             if graph[u][v] != float('inf') and v != parent:
-    #                 if visited[v]:
-    #                     return None
-    #                 stack.append((v, u))
-    #
-    #     # Step 4: Return root vertex
-    #     return root
-
 
 class TopologicalSort:
 

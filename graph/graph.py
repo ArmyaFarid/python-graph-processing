@@ -104,7 +104,7 @@ class Graph:
             if self.has_negative_weight():
                 raise ValueError("Poids negatif")
             dij = sp.Dijkstra(self.matrix)
-            return dij.dijkstra2(root)
+            return dij.dijkstra(root)
         if _type == 'BELLMANFORD':
             bm = sp.Bellman(self.matrix)
-            return bm.bellman_ford2(root)
+            return bm.bellman_ford(root)
