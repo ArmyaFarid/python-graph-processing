@@ -1,0 +1,7 @@
+venv/
+graphe_non_oriented/
+.idea/
+
+kurshall_test.py
+
+test.py
