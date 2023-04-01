@@ -86,7 +86,6 @@ def get_matrix_from_user(n, separator):
 
 
 def get_matrix(n, is_random=False):
-    pass
     if is_random:
         # vous pouvez changer de type de generation en utilisant une des fonction disponibles dans le modules graph.exemples
         if exemples.get_random_from_existing(n):
@@ -140,16 +139,7 @@ response = input('Y(oui)/sinon anuller. \nDefault[non]: \t')
 if response.upper() == 'Y':
     is_auto = True
 
-# used_matrix = get_matrix(n, is_auto)
-used_matrix = [[float('inf'), float('inf'), float('inf'), float('inf'), float('inf'), float('inf'), float('inf'), 7.0],
-               [float('inf'), float('inf'), 6.0, float('inf'), float('inf'), float('inf'), float('inf'), float('inf')],
-               [float('inf'), 10.0, float('inf'), float('inf'), float('inf'), float('inf'), float('inf'), float('inf')],
-               [float('inf'), float('inf'), float('inf'), float('inf'), float('inf'), float('inf'), 10.0, float('inf')],
-               [float('inf'), float('inf'), float('inf'), float('inf'), float('inf'), 7.0, float('inf'), float('inf')],
-               [float('inf'), float('inf'), float('inf'), float('inf'), 10.0, float('inf'), float('inf'), float('inf')],
-               [float('inf'), float('inf'), float('inf'), 9.0, float('inf'), float('inf'), float('inf'), float('inf')],
-               [5.0, float('inf'), float('inf'), float('inf'), float('inf'), float('inf'), float('inf'), float('inf')]
-               ]
+used_matrix = get_matrix(n, is_auto)
 
 graph = Graph(len(used_matrix), used_matrix)
 
